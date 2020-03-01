@@ -1,0 +1,12 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/components/title/title
+block variables
+	- const title = "yudin-test-voxweb"
+
+block content
+	.container
+		+title ЗИМБАБВЕ
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

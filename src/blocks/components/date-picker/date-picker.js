@@ -1,0 +1,13 @@
+modules.define('date-picker', ['i-bem-dom'], function(provide, bemDom) {
+
+provide(bemDom.declBlock(this.name, {
+    onSetMod: {
+        js: {
+            inited: function() {
+                
+            }
+        }
+    }
+}));
+
+});

@@ -1,0 +1,21 @@
+h1, h2, h3, h4, h5, h6, ul {
+    margin: 0;
+    padding: 0;
+}
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+.container {
+    @include container();
+    @include xs(max-width, 21.25rem);
+    @include sm(max-width, 30.45rem);
+    @include md(max-width, 39.6rem);
+    @include lg(max-width, 48.75rem);
+}
+a{
+    text-decoration: none;
+}
+.overflow-hidden{
+    overflow: hidden;
+}
