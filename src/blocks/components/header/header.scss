@@ -1,0 +1,89 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 70px;
+    background: rgba(0, 0, 0, 0);
+    transition: 0.3s;
+    overflow: hidden;
+    $this: &;
+    &__body{
+        background: $color-yellow;
+        width: 100%;
+        max-width: 100%;
+        height: 70px;
+        margin-left: auto;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 20px;
+    }
+    &__menu-btn{
+        position: relative;
+        background: none;
+        border: none;
+        outline: none !important;
+        height: 22px;
+        width: 30px;
+        span{
+            display: block;
+            position: absolute;
+            background: #000000;
+            left: 0;
+            transition: 0.3s;
+            width: 30px;
+            &:first-child {
+                height: 5px;
+                top: 0px;
+            }
+            &:nth-child(2){
+                height: 4px;
+                top: calc(50% - 2px);
+            }
+            &:last-child {
+                height: 5px;
+                bottom: 0px;
+            }
+        }
+        &_open{
+            span {
+                background: #ffffff;
+                &:first-child {
+                    top: calc(50% - 2.5px);
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    transform: rotate(-45deg);
+                }
+                &:last-child {
+                    bottom: calc(50% - 2.5px);
+                    height: 0px;
+                }
+            }
+        }
+    }
+    &__curtain{
+        margin-left: auto;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        background: $color-yellow;
+        transition: 0.3s;
+    }
+    &_out{
+        top: -100%;
+    }
+    &_open-curtain{
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.3);
+        #{$this}__body {
+            max-width: 530px;
+        }
+        #{$this}__curtain {
+            max-width: 530px;
+        }
+    }
+}

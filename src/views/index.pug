@@ -1,10 +1,12 @@
 extends layouts/default
 include helpers/mixins
+include ../blocks/components/header/header
 include ../blocks/components/title/title
 block variables
 	- const title = "yudin-test-voxweb"
 
 block content
+	+header
 	.container
 		+title ЗИМБАБВЕ
 block scripts

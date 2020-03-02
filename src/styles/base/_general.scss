@@ -6,6 +6,10 @@ h1, h2, h3, h4, h5, h6, ul {
     box-sizing: border-box;
 }
 
+body{
+    @include font-style(700);
+}
+
 .container {
     @include container();
     @include xs(max-width, 21.25rem);
