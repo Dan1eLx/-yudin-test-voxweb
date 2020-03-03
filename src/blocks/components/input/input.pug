@@ -2,7 +2,7 @@ mixin input
     .input
         if block
             span.input__title
-            block
+                block
         if attributes.required
-            span *
-        input.input__control(name = attributes.name, class = attributes.class, required = attributes.required)
+            span.input__title.input__title_red *
+        input.input__control(type = attributes.type, name = attributes.name, class = attributes.class, placeholder = attributes.placeholder, required = attributes.required)

@@ -1,0 +1,16 @@
+.form{
+    padding-top: 11px;
+    &__title{
+        padding-bottom: 70px;
+    }
+    &__row{
+        @include row-flex();
+    }
+    &__col{
+        @include col();
+        @include size(6);
+    }
+    &__subtitle{
+        padding-bottom: 31px;
+    }
+}

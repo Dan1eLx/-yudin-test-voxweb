@@ -1,19 +1,25 @@
 include ../title/title
 include ../subtitle/subtitle
 include ../input/input
+include ../checkbox/checkbox
 mixin form
     .form
         +title.form__title Заявка на подбор путешествия
         +subtitle.form__subtitle НЕМНОГО О ВАС
         .form__row
             .form__col
-                +input(required="required").phone КУДА И КОГДА ХОТИТЕ ПОЕХАТЬ?
+                +input(type="text", name="name", required="required").name ИМЯ
             .form__col
+                +input(type="text", name="phone").phone ТЕЛЕФОН
         +subtitle.form__subtitle О ПУТЕШЕСТВИИ
         .form__row
             .form__col
+                +input(type="text", name="locality", required="required", placeholder="Континент, страна или город").locality КУДА И КОГДА ХОТИТЕ ПОЕХАТЬ?
             .form__col
+                +input(type="text", name="date", placeholder="Даты или временной  интервал").date КОГДА?
             .form__col
                 +subtitle.form__subtitle УДОБНЫЙ СПОСОБ СВЯЗИ
             .form__col
                 +subtitle.form__subtitle ОТКУДА УЗНАЛИ О НАС
+        +checkbox(id="mailing", required="required", placeholder="Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент.") 
+            |Получать свежие предложения по электронной почте

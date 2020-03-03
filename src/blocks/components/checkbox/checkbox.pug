@@ -1,0 +1,13 @@
+mixin checkbox
+    .checkbox
+        input.checkbox__control(type = "checkbox", id = attributes.id, name = attributes.name, class = attributes.class, required = attributes.required)
+        label(for = attributes.id).checkbox__label
+            if block
+                span.checkbox__title
+                    block
+            if attributes.required
+                span.checkbox__title.checkbox__title_red *
+            if attributes.placeholder
+                span.checkbox__subtitle #{attributes.placeholder} 
+               
+    

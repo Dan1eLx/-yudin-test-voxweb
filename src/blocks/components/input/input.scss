@@ -1,0 +1,39 @@
+.input {
+    padding-bottom: 35px;
+    position: relative;
+    &__title{
+        display: inline-block;
+        font-size: 10px;
+        line-height: 12px;
+        padding-bottom: 8px;
+        &_red{
+            padding-left: 3px;
+            color: $color-pink  
+        }
+    }
+    &__control{
+        display: block;
+        width: 100%;
+        background: none;
+        outline: none;
+        padding: 18px 30px;
+        @include font-style(500);
+        font-size: 10px;
+        line-height: 12px;
+        border: 1px solid $color-lightgray;
+        border-radius: 3px;
+        &::placeholder{
+            color: $color-gray;
+        }
+    }
+    &__error{
+        position: absolute;
+        bottom: 15px;
+        left: 0px;
+        @include font-style(500);
+        font-size: 10px;
+        line-height: 12px;
+        color: $color-pink;
+    }
+
+}
