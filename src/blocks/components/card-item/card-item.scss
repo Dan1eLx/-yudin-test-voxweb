@@ -1,0 +1,78 @@
+.card-item{
+    width: 100%;
+    &__header{
+        position: relative;
+    }
+    &__img{
+        width: 100%;
+        height: 218px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 100%;
+            min-width: 100%;
+        }
+    }
+    &__price{
+        position: absolute;
+        width: 160px;
+        height: 50px;
+        bottom: 0;
+        left: 0;
+        background: $color-yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include font-style(900);
+        font-size: 18px;
+        line-height: 22px;
+    }
+    &__bottom{
+        padding-top: 10px;
+    }
+    &__country{
+        padding-bottom: 7px;
+        font-size: 9px;
+        line-height: 11px;
+        color: $color-yellow-2;
+    }
+    &__name{
+        padding-bottom: 20px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    &__path{
+        padding-bottom: 15px;
+        color: $color-gray;
+        font-size: 9px;
+        line-height: 13px;
+    }
+    &__duration{
+        font-size: 9px;
+        line-height: 11px;
+        span {
+            padding-left: 5px;
+            &:first-child {
+                padding-left: 0px;
+            }
+        }
+    }
+    &__date{
+        font-size: 9px;
+        line-height: 11px;
+    }
+    &__action{
+        padding-top: 12px;
+        span{
+            display: inline-block;
+            color: #ffffff;
+            background: $color-pink;
+            border-radius: 3px;
+            font-size: 9px;
+            line-height: 11px;
+            padding: 3px 18px 3px 12px;
+        }
+    }
+    
+}

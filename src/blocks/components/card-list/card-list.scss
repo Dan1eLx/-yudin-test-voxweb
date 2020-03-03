@@ -1,0 +1,15 @@
+.card-list{
+    $this: &;
+    padding-top: 116px;
+    &__title{
+        padding-bottom: 46px;
+    }
+    &__row{
+        @include row-flex();
+    }
+    &__col{
+        @include col();
+        @include size(6);
+        padding-bottom: 56px;
+    }
+}

@@ -20,14 +20,11 @@ function initOutHeader() {
 }
 
 function initActiveMenu() {
-    $('#menu-button').off('click');
-    $('#menu-button').on('click', function () {
-        $(this).toggleClass('menu-open');
+    $('.header__menu-btn').off('click');
+    $('.header__menu-btn').on('click', function () {
+        $(this).toggleClass('header__menu-btn_open');
         $('body').toggleClass('overflow-hidden');
-        if ($('.header').not('.header_scrolled')){
-            $('.header').addClass('header_scrolled');
-        }
-        $('.menu-wrapper').toggleClass('menu-wrapper_open')
+        $('.header').toggleClass('header_open-curtain')
     });
 
 }

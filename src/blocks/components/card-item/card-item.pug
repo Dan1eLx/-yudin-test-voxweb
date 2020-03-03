@@ -1,20 +1,23 @@
-mixin card-item
+mixin card-item(img, price, country, name, path, duration, lang, date, action)
     .card-item
         .card-item__header
             .card-item__img
-                img(src="", alt="")
+                img(src=`${img}`, alt=`${name}`)
             .card-item__price
-                span
+                span #{price}
         .card-item__bottom
             .card-item__country
-                span
+                span #{country}
             .card-item__name
-                span
-            .card-item__path
-                span
+                span #{name}
+            if path != ''
+                .card-item__path
+                    span #{path}
             .card-item__duration
-                span
+                span #{duration}
+                span #{lang}
             .card-item__date
-                span
-            .card-item__action
-                span
+                span #{date}
+            if action != ''
+                .card-item__action
+                    span #{action}

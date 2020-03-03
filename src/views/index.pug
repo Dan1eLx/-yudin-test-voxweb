@@ -1,14 +1,16 @@
 extends layouts/default
 include helpers/mixins
 include ../blocks/components/header/header
-include ../blocks/components/title/title
+include ../blocks/components/card-list/card-list
+include ../blocks/components/form/form
 block variables
 	- const title = "yudin-test-voxweb"
 
 block content
 	+header
 	.container
-		+title ЗИМБАБВЕ
+		+card-list
+		+form
 block scripts
 	script(src="js/main.js")
 	script(src="js/vendor.js")

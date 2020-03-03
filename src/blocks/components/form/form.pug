@@ -1,0 +1,19 @@
+include ../title/title
+include ../subtitle/subtitle
+include ../input/input
+mixin form
+    .form
+        +title.form__title Заявка на подбор путешествия
+        +subtitle.form__subtitle НЕМНОГО О ВАС
+        .form__row
+            .form__col
+                +input(required="required").phone КУДА И КОГДА ХОТИТЕ ПОЕХАТЬ?
+            .form__col
+        +subtitle.form__subtitle О ПУТЕШЕСТВИИ
+        .form__row
+            .form__col
+            .form__col
+            .form__col
+                +subtitle.form__subtitle УДОБНЫЙ СПОСОБ СВЯЗИ
+            .form__col
+                +subtitle.form__subtitle ОТКУДА УЗНАЛИ О НАС

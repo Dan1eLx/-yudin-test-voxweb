@@ -1,4 +1,53 @@
+include ../card-item/card-item
+include ../title/title
 mixin card-list
+    -
+        var items = [
+            {
+                img: '',
+                price: 'от 118 112 Р',
+                country: 'ИТАЛИЯ',
+                name: 'Под небом Тосканы',
+                path: 'Сансеполькро — (Перуджа) — Ассизи — Губбио — (Сиена) — Ла Верна — Ангиари — Монтерки — Ареццо — Кортона — (Пиенца) - (Монтепульчано)',
+                duration: '8 дней / 7 ночей',
+                lang: 'Русский язык',
+                date: '27.04.19 - 04.05.19и еще 15 дат',
+                action: 'Авиаперелет включен!'
+            },{
+                img: '',
+                price: '140 715 Р',
+                country: 'ИСЛАНДИЯ',
+                name: 'Майские каникулы в Исландии',
+                path: 'Рейкьявик — Тингвеллир — Гюдльфосс — Скафтафедль — Сельяландсфосс — Скоугафосс — Йёкюльсаурлоун — Голубая Лагуна — Снайфельсйёкутль — Arnarstapi — Рейкьявик',
+                duration: '8 дней / 7 ночей',
+                lang: 'Русский язык',
+                date: '27.04.19 - 04.05.19',
+                action: ''
+            },{
+                img: '',
+                price: '37 302 Р',
+                country: 'ТУРЦИЯ',
+                name: 'Открытие Турции',
+                path: 'Стамбул — Анкара — Каппадокия — Конья — Памуккале — Эфес — Кушадасы — Пергам — Ассос — Троя — Стамбул',
+                duration: '8 дней / 7 ночей',
+                lang: 'Русский язык',
+                date: '28.04.19 - 05.05.19и еще 15 дат',
+                action: ''
+            },{
+                img: '',
+                price: '145 000 Р',
+                country: 'НОРВЕГИЯ, ШПИЦБЕРГЕН',
+                name: 'От Свальбарда до Груманта',
+                path: '',
+                duration: '8 дней / 7 ночей',
+                lang: 'Русский язык',
+                date: '27.04.19 - 04.05.19и еще 15 дат',
+                action: 'Гарантированный тур!'
+            }
+        ]
     .card-list
+        +title.card-list__title ЗИМБАБВЕ
         .card-list__row
-            .card-list__col
+            each item in items
+                .card-list__col
+                    +card-item(item.img, item.price, item.country, item.name, item.path, item.duration, item.lang, item.date, item.action)
