@@ -8,6 +8,7 @@
     background: rgba(0, 0, 0, 0);
     transition: 0.3s;
     overflow: hidden;
+    z-index: 1;
     $this: &;
     &__body{
         background: $color-yellow;
@@ -22,6 +23,7 @@
         padding-right: 20px;
     }
     &__menu-btn{
+        cursor: pointer;
         position: relative;
         background: none;
         border: none;

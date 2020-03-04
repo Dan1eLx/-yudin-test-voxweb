@@ -2,8 +2,9 @@ include ../title/title
 include ../subtitle/subtitle
 include ../input/input
 include ../checkbox/checkbox
+include ../button/button
 mixin form
-    .form
+    form.form
         +title.form__title Заявка на подбор путешествия
         +subtitle.form__subtitle НЕМНОГО О ВАС
         .form__row
@@ -19,7 +20,23 @@ mixin form
                 +input(type="text", name="date", placeholder="Даты или временной  интервал").date КОГДА?
             .form__col
                 +subtitle.form__subtitle УДОБНЫЙ СПОСОБ СВЯЗИ
+                .form__checkbox-group
+                    +checkbox-big(id="VIBER") VIBER
+                    +checkbox-big(id="WHATSAPP") WHATSAPP
+                    +checkbox-big(id="mail") ПОЧТА
+                    +checkbox-big(id="phone") ТЕЛЕФОН
             .form__col
                 +subtitle.form__subtitle ОТКУДА УЗНАЛИ О НАС
-        +checkbox(id="mailing", required="required", placeholder="Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент.") 
+                .form__checkbox-group
+                    +checkbox-big(id="internet") ИНТЕРНЕТ
+                    +checkbox-big(id="friends") РЕКОМЕНДОВАЛИ ДРУЗЬЯ
+                    +checkbox-big(id="socials") СОЦ. СЕТИ
+                    +checkbox-big(id="traveled") УЖЕ ЕЗДИЛ
+        +checkbox(id="mailing", placeholder="Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент.").form__checkbox
             |Получать свежие предложения по электронной почте
+        +checkbox(id="processing", required="required", placeholder="Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения").form__checkbox
+            |С обработкой своих персональных данных согласен.
+        .form__remark
+            span * 
+            | Поля, которые надо обязательно заполнить
+        +button(type='submit').button_submit ОТПРАВИТЬ

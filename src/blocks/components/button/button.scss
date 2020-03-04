@@ -1,0 +1,30 @@
+.button {
+  outline: none !important;
+  padding: 17px 30px;
+  @include font-style(500);
+  font-size: 12px;
+  line-height: 14px;
+  border: 1px solid #000000;
+  border-radius: 29.5px;
+  text-align: center;
+  background: $color-yellow;
+  width: 280px;
+  cursor: pointer;
+  &_submit{
+    border: none;
+    text-align: left;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      right: 30px;
+      top: calc(50% - 3px);
+      display: block;
+      border-top: 1px solid #000000;
+      border-right: 1px solid #000000;
+      transform: rotate(45deg);
+      width: 6px;
+      height: 6px;
+    }
+  }
+}

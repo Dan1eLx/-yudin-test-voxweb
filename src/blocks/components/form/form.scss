@@ -1,16 +1,38 @@
-.form{
+.form {
     padding-top: 11px;
-    &__title{
+    padding-bottom: 164px;
+    &__title {
         padding-bottom: 70px;
     }
-    &__row{
+    &__row {
         @include row-flex();
     }
-    &__col{
+    &__col {
         @include col();
         @include size(6);
     }
-    &__subtitle{
+    &__subtitle {
         padding-bottom: 31px;
+    }
+    &__checkbox-group {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 60px;
+        padding-bottom: 35px;
+    }
+    &__checkbox {
+        padding-bottom: 35px;
+    }
+    &__remark {
+        padding-left: 30px;
+        padding-bottom: 40px;
+        @include font-style(300);
+        font-size: 10px;
+        line-height: 12px;
+        color: $color-gray;
+        span{
+            color: $color-pink;
+        }
     }
 }
