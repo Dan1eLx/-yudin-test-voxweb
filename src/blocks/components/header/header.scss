@@ -20,7 +20,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding-right: 20px;
+        padding-right: 25px;
     }
     &__menu-btn{
         cursor: pointer;
@@ -79,6 +79,11 @@
         height: 100%;
         background: $color-yellow;
         transition: 0.3s;
+        &-container{
+            width: 280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
     &_out{
         top: -100%;

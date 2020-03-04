@@ -9,6 +9,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
+        picture{
+            height: 100%;
+        }
         img{
             height: 100%;
             min-width: 100%;

@@ -1,8 +1,14 @@
 .checkbox{
     $this: &;
-
+    position: relative;
     &__control {
-        display: none;
+        position: absolute;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        &.error ~ #{$this}__label:before {
+            border-color: $color-pink;
+        }
     }
     &__label {
         cursor: pointer;
@@ -37,7 +43,7 @@
             
         }
     }
-    &__control:checked + .checkbox__label::after {
+    &__control:checked ~ .checkbox__label::after {
         opacity: 1;
     }
     &__title {

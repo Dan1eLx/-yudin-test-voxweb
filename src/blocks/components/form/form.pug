@@ -11,30 +11,30 @@ mixin form
             .form__col
                 +input(type="text", name="name", required="required").name ИМЯ
             .form__col
-                +input(type="text", name="phone").phone ТЕЛЕФОН
+                +input(type="text", name='phone').phone ТЕЛЕФОН
         +subtitle.form__subtitle О ПУТЕШЕСТВИИ
         .form__row
             .form__col
                 +input(type="text", name="locality", required="required", placeholder="Континент, страна или город").locality КУДА И КОГДА ХОТИТЕ ПОЕХАТЬ?
             .form__col
-                +input(type="text", name="date", placeholder="Даты или временной  интервал").date КОГДА?
+                +input(type="text", name='date' placeholder="Даты или временной  интервал").date КОГДА?
             .form__col
                 +subtitle.form__subtitle УДОБНЫЙ СПОСОБ СВЯЗИ
                 .form__checkbox-group
-                    +checkbox-big(id="VIBER") VIBER
-                    +checkbox-big(id="WHATSAPP") WHATSAPP
-                    +checkbox-big(id="mail") ПОЧТА
-                    +checkbox-big(id="phone") ТЕЛЕФОН
+                    +checkbox-big(name="VIBER" id="VIBER") VIBER
+                    +checkbox-big(name="WHATSAPP" id="WHATSAPP") WHATSAPP
+                    +checkbox-big(name="mail" id="mail") ПОЧТА
+                    +checkbox-big(name="telephone" id="telephone") ТЕЛЕФОН
             .form__col
                 +subtitle.form__subtitle ОТКУДА УЗНАЛИ О НАС
                 .form__checkbox-group
-                    +checkbox-big(id="internet") ИНТЕРНЕТ
-                    +checkbox-big(id="friends") РЕКОМЕНДОВАЛИ ДРУЗЬЯ
-                    +checkbox-big(id="socials") СОЦ. СЕТИ
-                    +checkbox-big(id="traveled") УЖЕ ЕЗДИЛ
-        +checkbox(id="mailing", placeholder="Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент.").form__checkbox
+                    +checkbox-big(name="internet" id="internet") ИНТЕРНЕТ
+                    +checkbox-big(name="friends" id="friends") РЕКОМЕНДОВАЛИ ДРУЗЬЯ
+                    +checkbox-big(name="socials" id="socials") СОЦ. СЕТИ
+                    +checkbox-big(name="traveled" id="traveled") УЖЕ ЕЗДИЛ
+        +checkbox(name="mailing", id="mailing", placeholder="Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент.").form__checkbox
             |Получать свежие предложения по электронной почте
-        +checkbox(id="processing", required="required", placeholder="Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения").form__checkbox
+        +checkbox(id="processing", name="processing", required="required", placeholder="Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения").form__checkbox
             |С обработкой своих персональных данных согласен.
         .form__remark
             span * 

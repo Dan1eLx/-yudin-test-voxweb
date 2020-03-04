@@ -1,3 +1,6 @@
+include ../button/button
+include ../menu/menu
+include ../accordion/accordion
 mixin header
     .header
         .header__body
@@ -6,3 +9,19 @@ mixin header
                 span
                 span
         .header__curtain
+             .header__curtain-container
+                .header__accordions
+                    +accordion(title="Страны")
+                        div fgfg fgfffff ffff
+                        div fgfg fgfffff ffff
+                        div fgfg fgfffff ffff
+                        div fgfg fgfffff ffff
+                        div fgfg fgfffff ffff
+                        div fgfg fgfffff ffff
+                    +accordion(title="Страны")
+                        div fgfg fgfffff ffff
+                        div fgfg fgfffff ffff
+                        div fgfg fgfffff ffff
+                        div fgfg fgfffff ffff
+                        div fgfg fgfffff ffff
+                        div fgfg fgfffff ffff

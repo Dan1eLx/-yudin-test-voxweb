@@ -1,0 +1,5 @@
+mixin accordion
+    .accordion(class = attributes.class)
+        button.accordion__button #{attributes.title}
+        .accordion__body
+            block
