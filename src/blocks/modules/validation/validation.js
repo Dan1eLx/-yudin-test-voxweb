@@ -5,7 +5,7 @@ import "inputmask/dist/jquery.inputmask";
 $(document).ready(function () {
 
     // Секция с вызовом масок ввода
-    $('.phone').inputmask("+ 7 (999) 999-99-99");
+    $('.phone').inputmask("+ 7 999 999 99 99", { showMaskOnHover: false});
     // Конец секции с вызовом масок ввода
 
     // Секция с инициализацией валидации и её опций

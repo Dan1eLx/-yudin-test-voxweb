@@ -37,10 +37,10 @@
         padding-right: 30px;
         border-radius: 29.5px;
         background: #ffffff;
-        height: 100%;
+        height: auto;
         max-height: 48px;
         overflow: hidden;
-        transition: 0.5s linear all;
+        transition: max-height 0.3s linear, padding-top 0.3s linear, padding-bottom 0.3s linear;
     }
     &_open{
         #{$this}__body{
