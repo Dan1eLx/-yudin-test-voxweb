@@ -9,7 +9,7 @@ $(document).ready(function () {
     // Конец секции с вызовом масок ввода
 
     // Секция с инициализацией валидации и её опций
-    $("form").each(function() {
+    $(".form_validate").each(function() {
         $(this).validate({
             debug: true,
             oninput: false,
@@ -27,7 +27,7 @@ $(document).ready(function () {
             }
         });
     });
-    $("form input").on("input", function() {
+    $(".form_validate input").on("input", function() {
         $(this).valid();
     })
     // Конец секции с инициализацией валидации

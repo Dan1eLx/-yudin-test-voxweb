@@ -1,0 +1,60 @@
+.select {
+    $this: &;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    &__show {
+        outline: none !important;
+        @include font-style(700);
+        font-size: 14px;
+        line-height: 17px;
+        width: 100%;
+        color: #000000;
+        display: block;
+        padding-top: 8px;
+        padding-bottom: 9px;
+    }
+    &__group{
+        max-height: 34px;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        transition: all 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    }
+    &__list{
+        height: 100%;
+        overflow-y: auto;
+        padding-right: 14px;
+    }
+    &__group_open{
+        max-height: 300px;
+    }
+    &__item{
+        display: block;
+        font-size: 14px;
+        line-height: 30px;
+        @include font-style(500);
+        padding: 0px 14px;
+        transition: 0.3s;
+        margin-bottom: 2px;
+        cursor: pointer;
+    }
+    &__control {
+        position: absolute;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+    &__control:checked + #{$this}__item {
+        background: rgba(196, 196, 196, 0.3);
+        border-radius: 15px;
+    }
+    &__all{
+        font-size: 10px;
+        line-height: 30px;
+        padding: 0px 14px;
+        @include font-style(500);
+        color: $color-yellow;
+        text-transform: uppercase;
+    }
+}

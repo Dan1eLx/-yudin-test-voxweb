@@ -80,10 +80,14 @@
         background: $color-yellow;
         transition: 0.3s;
         &-container{
+            padding-top: 30px;
             width: 280px;
             margin-left: auto;
             margin-right: auto;
         }
+    }
+    &__accordion{
+        margin-bottom: 18px;
     }
     &_out{
         top: -100%;

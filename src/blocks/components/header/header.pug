@@ -1,6 +1,7 @@
 include ../button/button
 include ../menu/menu
 include ../accordion/accordion
+include ../select/select
 mixin header
     .header
         .header__body
@@ -10,15 +11,17 @@ mixin header
                 span
         .header__curtain
              .header__curtain-container
-                .header__accordions
-                    +accordion(title="Страны")
+                form.header__filters
+                    +accordion(title="Страны").header__accordion
+                        +select
+                    +accordion(title="Даты").header__accordion
                         div fgfg fgfffff ffff
                         div fgfg fgfffff ffff
                         div fgfg fgfffff ffff
                         div fgfg fgfffff ffff
                         div fgfg fgfffff ffff
                         div fgfg fgfffff ffff
-                    +accordion(title="Страны")
+                    +accordion(title="Тип путешествия").header__accordion
                         div fgfg fgfffff ffff
                         div fgfg fgfffff ffff
                         div fgfg fgfffff ffff
