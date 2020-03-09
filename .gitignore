@@ -7,6 +7,9 @@
 .vscode
 .github
 .env
+.firebaserc
+firebase.json
+.firebase
 ehthumbs.db
 Thumbs.db
 node_modules
