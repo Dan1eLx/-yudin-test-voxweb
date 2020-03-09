@@ -27,7 +27,7 @@ body{
     @include xs(max-width, 21.25rem);
     @include sm(max-width, 30.45rem);
     @include md(max-width, 39.6rem);
-    @include lg(max-width, 48.75rem);
+    @include lg(max-width, 50rem);
 }
 a{
     text-decoration: none;

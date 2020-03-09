@@ -4,8 +4,8 @@ mixin card-item(img, price, country, name, path, duration, lang, date, action)
             .card-item__img
                 picture
                     source(type="image/webp" srcset=`${img}.webp`)
-                    source(type="image/jpeg" srcset=`${img}.jpeg`)
-                    img(src=`${img}.jpeg`, alt=`${name}`)
+                    source(type="image/jpg" srcset=`${img}.jpg`)
+                    img(src=`${img}.jpg`, alt=`${name}`)
             .card-item__price
                 span #{price}
         .card-item__bottom

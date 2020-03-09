@@ -1,0 +1,6 @@
+mixin menu(values)
+    .menu(class = attributes.class)
+        ul.menu__ul
+            for val in values
+                li.menu__li
+                    a.menu__link(href = val.href) #{val.title}

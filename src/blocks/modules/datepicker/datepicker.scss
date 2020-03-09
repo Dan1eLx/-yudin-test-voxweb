@@ -1,0 +1,64 @@
+.datepicker{
+    
+    .-other-month-{
+        display: none;
+    }
+    .-focus-{
+        background: rgba(196, 196, 196, 0.3) !important;
+        border-radius: 50px !important;
+    }
+    .-in-range-{
+        background: rgba(196, 196, 196, 0.3) !important;
+    }
+    .-range-from-{
+        border-top-left-radius: 50px !important;
+        border-bottom-left-radius: 50px !important;
+        background: $color-yellow !important;
+    }
+    .-range-to-{
+        border-top-right-radius: 50px !important;
+        border-bottom-right-radius: 50px !important;
+        background: $color-yellow !important;
+    }
+    
+    .-selected-{
+        background: $color-yellow !important;
+    }
+   
+    &--nav{
+        border: none;
+        &-action:hover {
+            background: rgba(196, 196, 196, 0.3) !important;
+            border-radius: 50px !important;
+        }
+        &-title{
+            font-size: 14px;
+            line-height: 17px;
+            @include font-style(700);
+            color: #000000 !important;
+            i{
+                color: #000000 !important;
+            }
+            &:hover{
+                border-radius: 50px !important;
+            }
+        }
+    }
+    &--days-names{
+        margin-bottom: 15px;
+    }
+    &--day-name{
+        @include font-style(500);
+        font-size: 12px;
+        line-height: 14px;
+        color: #000000 !important;
+    }
+    &--cell-day{
+        @include font-style(500);
+        font-size: 12px;
+        line-height: 35px;
+        height: 30px;
+        margin-bottom: 5px;
+        color: #000000 !important;
+    }
+}

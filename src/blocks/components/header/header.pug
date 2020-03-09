@@ -2,6 +2,8 @@ include ../button/button
 include ../menu/menu
 include ../accordion/accordion
 include ../select/select
+include ../menu/menu
+
 mixin header
     .header
         .header__body
@@ -10,21 +12,20 @@ mixin header
                 span
                 span
         .header__curtain
-             .header__curtain-container
+            .header__curtain-container
                 form.header__filters
-                    +accordion(title="Страны").header__accordion
-                        +select
-                    +accordion(title="Даты").header__accordion
-                        div fgfg fgfffff ffff
-                        div fgfg fgfffff ffff
-                        div fgfg fgfffff ffff
-                        div fgfg fgfffff ffff
-                        div fgfg fgfffff ffff
-                        div fgfg fgfffff ffff
+                    +accordion(title="Страны").header__accordion.header__accordion_flex150
+                        - var countries = [{title: 'Аргентина'},{title: 'Бразилия'},{title: 'Перу'},{title: 'Уругвай'},{title: 'Чили'},{title: 'Эквадор'}]
+                        - var continents = [{title: 'Южная Америка', items: countries},{title: 'Северная Америка', items: countries},{title: 'Арктика и Антарктида', items: countries},{title: 'Африка', items: countries},{title: 'Австралия и Океания', items: countries},{title: 'Европа', items: countries},{title: 'Россия', items: countries},{title: 'Азия', items: countries},] 
+                        +select(continents)
+                    +accordion(title="Даты").header__accordion.header__accordion_flex120
+                        .header__datepicker.datepicker-here(data-range="true" data-multiple-dates-separator=" - ")
+                        .header__datepicker-subtitle Выберите дату не позднее которой хотите вернуться
                     +accordion(title="Тип путешествия").header__accordion
-                        div fgfg fgfffff ffff
-                        div fgfg fgfffff ffff
-                        div fgfg fgfffff ffff
-                        div fgfg fgfffff ffff
-                        div fgfg fgfffff ffff
-                        div fgfg fgfffff ffff
+                        - var relaxation = [{title: 'Активный'},{title: 'Майские'},{title: 'На авто'},{title: 'На корабле'},{title: 'Новый год'},{title: 'Поход'}]
+                        +select(relaxation)
+                    +button(type = 'submit') НАЙТИ
+                +menu([{href:'#', title:'Путешествия'},{href:'#', title:'О нас'},{href:'#', title:'Отзывы'},{href:'#', title:'Блог'}]).header__menu
+                .header__curtain-bottom
+                    a(href="tel:+74951234567").header__phone +7 (495) 123-45-67
+                    +button(href = 'javascript:void(0);') ПОДБЕРИТЕ МНЕ ТУР

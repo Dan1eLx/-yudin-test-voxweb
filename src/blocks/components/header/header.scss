@@ -21,6 +21,8 @@
         align-items: center;
         justify-content: flex-end;
         padding-right: 25px;
+        position: relative;
+        z-index: 2;
     }
     &__menu-btn{
         cursor: pointer;
@@ -73,22 +75,82 @@
         }
     }
     &__curtain{
+        overflow-y: auto;
         margin-left: auto;
         max-width: 100%;
         width: 100%;
-        height: 100%;
+        height: calc(100vh - 70px);
         background: $color-yellow;
         transition: 0.3s;
         &-container{
+            opacity: 0;
+            transition: opacity 0.15s;
             padding-top: 30px;
+            padding-bottom: 165px;
             width: 280px;
             margin-left: auto;
             margin-right: auto;
         }
+        &-bottom{
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+            background: $color-yellow;
+            padding-bottom: 55px;
+        }
+    }
+    &__phone{
+        @include font-style(900);
+        font-size: 24px;
+        line-height: 29px;
+        color: #141414;
+        margin-bottom: 24px;
+        display: block;
+        text-align: center;
+        transition: 0.3s;
+        &:hover{
+            color:#fff;
+            text-shadow: 0px 0px 2px #000;
+        }
+    }
+    &__filters{
+        @include lg-block{
+            margin-bottom: 50px;
+        }
+        margin-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__datepicker{
+        margin-bottom: 20px;
+        .datepicker{
+            width: auto;
+            border: none;
+        }
+        &-subtitle{
+            @include font-style(500);
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+        }
     }
     &__accordion{
-        margin-bottom: 18px;
+        &:not(.accordion_hidden){
+            margin-bottom: 18px;
+        }
+        max-width: 100%;
+        &_flex150:not(.accordion_open){
+            flex: 0 0 150px;
+            max-width: 150px;
+        }
+
+        &_flex120:not(.accordion_open){
+            flex: 0 0 120px;
+            max-width: 120px;
+        }
     }
+
     &_out{
         top: -100%;
     }
@@ -100,6 +162,9 @@
         }
         #{$this}__curtain {
             max-width: 530px;
+            &-container{
+                opacity: 1;
+            }
         }
     }
 }

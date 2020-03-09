@@ -1,5 +1,8 @@
 .input {
-    padding-bottom: 35px;
+    @include md-block{
+        padding-bottom: 35px;
+    }
+    padding-bottom: 24px;
     position: relative;
     &__title{
         display: inline-block;
@@ -29,7 +32,10 @@
             border-color: $color-pink;
             & ~ .error{
                 position: absolute;
-                bottom: 15px;
+                bottom: 10px;
+                @include md-block{
+                    bottom: 15px;
+                }
                 left: 0px;
                 @include font-style(500);
                 font-size: 10px;

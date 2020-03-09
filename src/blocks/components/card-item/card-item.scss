@@ -5,15 +5,26 @@
     }
     &__img{
         width: 100%;
-        height: 218px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
+        
         picture{
-            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            height: 195px;
+            @include sm-block{
+                height: 130px;
+            }
+            @include md-block{
+                height: 175px;
+            }
+            @include lg-block{
+                height: 218px;
+            }
+            width: 100%;
         }
         img{
+            object-fit: cover;
             height: 100%;
             min-width: 100%;
         }
@@ -42,12 +53,12 @@
         color: $color-yellow-2;
     }
     &__name{
-        padding-bottom: 20px;
+        padding-bottom: 15px;
         font-size: 18px;
         line-height: 22px;
     }
     &__path{
-        padding-bottom: 15px;
+        padding-bottom: 11px;
         color: $color-gray;
         font-size: 9px;
         line-height: 13px;
@@ -56,7 +67,7 @@
         font-size: 9px;
         line-height: 11px;
         span {
-            padding-left: 5px;
+            padding-left: 12px;
             &:first-child {
                 padding-left: 0px;
             }
@@ -67,7 +78,7 @@
         line-height: 11px;
     }
     &__action{
-        padding-top: 12px;
+        padding-top: 9px;
         span{
             display: inline-block;
             color: #ffffff;

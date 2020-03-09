@@ -7,10 +7,12 @@ function toggleAccordion(){
     $('.accordion__button').on('click', function(){
         var accordion = $(this).closest('.accordion');
         if (accordion.is('.accordion_open')){
+            $('.accordion').removeClass('accordion_hidden');
             accordion.removeClass('accordion_open');
         } else {
-            $('.accordion').removeClass('accordion_open');
             accordion.addClass('accordion_open');
+            $('.accordion').addClass('accordion_hidden');
+            accordion.removeClass('accordion_hidden');
         }
     })
 }

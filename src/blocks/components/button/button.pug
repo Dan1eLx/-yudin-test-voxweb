@@ -1,6 +1,13 @@
 mixin button
-  button.button(type = attributes.type, class = attributes.class)
-    if block
-      block
-    else
-      |кнопка
+  if attributes.type == 'submit'
+    button.button(type = attributes.type, class = attributes.class)
+      if block
+        block
+      else
+        |кнопка
+  else
+     a.button(href = attributes.href type = attributes.type, class = attributes.class)
+      if block
+        block
+      else
+        |кнопка

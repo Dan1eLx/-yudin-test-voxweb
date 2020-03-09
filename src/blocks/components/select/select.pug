@@ -1,66 +1,14 @@
-mixin select
+mixin select(values)
     .select
-        .select__group
-            a(href="javascript:void(0);").select__show Южная Америка
-            .select__list
-                input(type='checkbox' id="select1").select__control
-                label(for="select1").select__item Аргентина
-                input(type='checkbox' id="select2").select__control 
-                label(for="select2").select__item Бразилия
-                input(type='checkbox' id="select3").select__control 
-                label(for="select3").select__item Перу
-                input(type='checkbox' id="select4").select__control 
-                label(for="select4").select__item Уругвай
-                input(type='checkbox' id="select5").select__control 
-                label(for="select5").select__item Чили
-                input(type='checkbox' id="select6").select__control 
-                label(for="select6").select__item Эквадор
-                a(href="javascript:void(0);").select__all все туры на континенте
-        .select__group
-            a(href="javascript:void(0);").select__show Северная Америка
-            .select__list
-                input(type='checkbox' id="select7").select__control
-                label(for="select7").select__item Аргентина
-                input(type='checkbox' id="select8").select__control 
-                label(for="select8").select__item Бразилия
-                input(type='checkbox' id="select9").select__control 
-                label(for="select9").select__item Перу
-                input(type='checkbox' id="select10").select__control 
-                label(for="select10").select__item Уругвай
-                input(type='checkbox' id="select11").select__control 
-                label(for="select11").select__item Чили
-                input(type='checkbox' id="select12").select__control 
-                label(for="select12").select__item Эквадор
-                a(href="javascript:void(0);").select__all все туры на континенте
-        .select__group
-            a(href="javascript:void(0);").select__show Европа
-            .select__list
-                input(type='checkbox' id="select13").select__control
-                label(for="select13").select__item Аргентина
-                input(type='checkbox' id="select14").select__control 
-                label(for="select14").select__item Бразилия
-                input(type='checkbox' id="select15").select__control 
-                label(for="select15").select__item Перу
-                input(type='checkbox' id="select16").select__control 
-                label(for="select16").select__item Уругвай
-                input(type='checkbox' id="select17").select__control 
-                label(for="select17").select__item Чили
-                input(type='checkbox' id="select18").select__control 
-                label(for="select18").select__item Эквадор
-                a(href="javascript:void(0);").select__all все туры на континенте
-        .select__group
-            a(href="javascript:void(0);").select__show Азия
-            .select__list
-                input(type='checkbox' id="select19").select__control
-                label(for="select19").select__item Аргентина
-                input(type='checkbox' id="select20").select__control 
-                label(for="select20").select__item Бразилия
-                input(type='checkbox' id="select21").select__control 
-                label(for="select21").select__item Перу
-                input(type='checkbox' id="select22").select__control 
-                label(for="select22").select__item Уругвай
-                input(type='checkbox' id="select23").select__control 
-                label(for="select23").select__item Чили
-                input(type='checkbox' id="select24").select__control 
-                label(for="select24").select__item Эквадор
-                a(href="javascript:void(0);").select__all все туры на континенте
+        each val, index in values
+            if val.items
+                .select__group
+                    a(href="javascript:void(0);").select__show #{val.title}
+                    .select__list
+                        each item, index_item in val.items
+                            input(type='checkbox' id="select" + index + index_item).select__control
+                            label(for="select" + index + index_item ).select__item #{item.title}
+                        a(href="javascript:void(0);").select__all все туры на континенте
+            else
+                input(type='checkbox' id="select" + index).select__control
+                label(for="select" + index).select__item #{val.title}

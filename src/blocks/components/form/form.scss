@@ -1,28 +1,49 @@
 .form {
-    padding-top: 11px;
-    padding-bottom: 164px;
+    padding-top: 8px;
+    padding-bottom: 108px;
+    @include lg-block{
+        padding-bottom: 164px;
+    }
     &__title {
-        padding-bottom: 70px;
+        text-align: left !important;
+        padding-bottom: 27px;
+        @include sm-block{
+            text-align: center !important;
+            padding-bottom: 71px;
+        }
+        @include lg-block{
+           
+        }
     }
     &__row {
         @include row-flex();
     }
     &__col {
         @include col();
-        @include size(6);
+        @include size(12);
+        @include md-block{
+           @include size(6);
+        }
     }
     &__subtitle {
-        padding-bottom: 31px;
+        padding-bottom: 26px;
     }
     &__checkbox-group {
         display: flex;
         justify-content: space-between;
         padding-left: 20px;
+        padding-right: 20px;
+        @include lg-block{
         padding-right: 60px;
+        }
         padding-bottom: 35px;
     }
     &__checkbox {
-        padding-bottom: 35px;
+        padding-bottom: 23px;
+        @include md-block{
+            padding-bottom: 35px;
+        }
+       
     }
     &__remark {
         padding-left: 30px;

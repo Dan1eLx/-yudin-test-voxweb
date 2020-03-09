@@ -2,6 +2,9 @@
     $this: &;
     display: flex;
     flex-wrap: wrap;
+    max-height: 48px;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
     &__button {
         outline: none !important;
         padding: 17px 30px;
@@ -19,6 +22,7 @@
         cursor: pointer;
         &:before{
             content: '';
+            transition: 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
             position: absolute;
             right: 30px;
             top: calc(50% - 3px);
@@ -42,13 +46,23 @@
         height: auto;
         max-height: 48px;
         overflow: hidden;
-        transition: all 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+        transition: padding-top 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95), padding-bottom 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95), max-height 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    }
+    &_hidden{
+        display: none;
     }
     &_open{
+        display: flex;
+        max-height: 540px;
         #{$this}__body{
             padding-top: 48px;
             padding-bottom: 21px;
             max-height: 540px;
+        }
+        #{$this}__button{
+            &:before{
+                transform: rotate(-135deg);
+            }
         }
     }
 }
